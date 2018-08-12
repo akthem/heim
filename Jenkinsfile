@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Serve') {
       steps {
-        bat 'd:/Dev/projectss/batches/serve.bat'
+        bat(script: 'd:/Dev/projectss/batchs/serve.bat', returnStatus: true, returnStdout: true)
       }
     }
   }
