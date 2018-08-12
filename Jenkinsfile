@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'sh echo "here we build the application"'
+        sh 'echo "here we build the application"'
       }
     }
     stage('Deploy') {
