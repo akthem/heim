@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Monitor') {
       steps {
@@ -8,17 +8,17 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'echo "here we build the application"'
+        bat(script: 'D:/Dev/projectss/batchs/build.bat', returnStatus: true, returnStdout: true)
       }
     }
     stage('Deploy') {
       steps {
-        sh 'echo "here the artifacts under src/dist must be migrated on the server 5 for angular application" '
+        bat(script: 'd:/Dev/projectss/batches/depoly.bat', returnStatus: true, returnStdout: true)
       }
     }
     stage('Serve') {
       steps {
-        sh 'echo "here we serve the pulled application from git locally"'
+        bat 'd:/Dev/projectss/batches/serve.bat'
       }
     }
   }
