@@ -8,17 +8,17 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'sh ng build --prod'
+        sh 'sh echo "here we build the application"'
       }
     }
     stage('Deploy') {
       steps {
-        sh 'echo "hello world" '
+        sh 'echo "here the artifacts under src/dist must be migrated on the server 5 for angular application" '
       }
     }
     stage('Serve') {
       steps {
-        sleep(time: 11111, unit: 'MINUTES')
+        sh 'echo "here we serve the pulled application from git locally"'
       }
     }
   }
