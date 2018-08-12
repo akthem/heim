@@ -1,11 +1,9 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Monitor') {
       steps {
-        node {
         git(url: 'https://github.com/akthem/heim.git', branch: 'master', changelog: true, credentialsId: '@akthem1', poll: true)
-        }
       }
     }
     stage('Build') {
