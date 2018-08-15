@@ -34,7 +34,7 @@ pipeline {
       parallel {
         stage('Deploy') {
           steps {
-            bat(script: 'D:\\Dev\\batchs\\depoly.bat', returnStatus: true, returnStdout: true)
+            bat(script: 'D:\\Dev\\batchs\\deploy.bat', returnStatus: true, returnStdout: true)
           }
         }
         stage('Deploy Production Env') {
