@@ -22,6 +22,7 @@ pipeline {
         stage('End To End tests') {
           steps {
             bat(script: 'D:\\Dev\\batchs\\e2e.bat', returnStatus: true, returnStdout: true)
+            echo 'thanks'
           }
         }
         stage('generate Documentation') {
@@ -55,7 +56,7 @@ pipeline {
         }
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         sleep 10
       }
