@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
           steps {
             bat(script: 'D:/Dev/batchs/build.bat', returnStatus: true, returnStdout: true)
+            echo 'Hello Hello Hello'
           }
         }
         stage('Unit Test') {
@@ -54,9 +55,9 @@ pipeline {
         }
       }
     }
-    stage('Serve Local') {
+    stage('') {
       steps {
-        bat(script: 'D:\\Dev\\batchs\\serve.bat', returnStatus: true, returnStdout: true)
+        sleep 10
       }
     }
   }
