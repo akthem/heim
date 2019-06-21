@@ -10,7 +10,7 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            bat(script: 'D:/Dev/batchs/build.bat', returnStatus: true, returnStdout: true)
+            bat(script: '{workspace}/batchs/build.bat', returnStatus: true, returnStdout: true)
             echo 'Hello Hello Hello'
           }
         }
